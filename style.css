@@ -1,7 +1,4 @@
-h1{
-    color: red;
-    font-size: 4.7rem;
-}
+
 
 * {
     margin: 0;
@@ -10,18 +7,18 @@ h1{
 }
 
 body{
-    color: white;
+    color: var(--white);
     font-family: "Jost", sans-serif;
-    font-size: 1,15rem;
+    font-size: 1.8rem;
 }
 
 a{
-    color: white;
+    color: var(--white);
     text-decoration: none;
 }
 
 html{
-    font-size: 62.5;
+    font-size: 62.5%;
 }
 
 .row{
@@ -30,10 +27,29 @@ html{
 
 }
 
+.btn {  
+    display: inline-block;
+    padding: 1.2rem 4rem;
+    /* detta ritar ut en linje som går runt padding området */
+    border: 1px solid var(--blue);
+    font-size: 2rem;
+    /* kan vara fel har testa mig fram själv*/
+    background: var(--blue);
+}
+
+
+:root{
+    --blue: #4659ff;
+    --white: #ffffff;
+    --nav-height: 8rem;
+}
+
+/* Header */
+
 header {
     display: flex;
     flex-direction: column;
-    background-image: url('images/background.jpeg');
+    background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.4)), url('images/background.jpeg');
     height: 100vh;
     background-size: cover;
     background-position: center;
@@ -46,21 +62,31 @@ header .row {
 /*navigations element */
 nav{
     display: flex;
-    gap: 3.75rem;
+    gap: 6rem;
     justify-content: center;
     align-items: center;
     padding: 2rem;
-    height: 5.5rem;
+    height: var(--nav-height);
 }
 
 /* styr länkarna inuti nav */
 nav a{
-    font-size: 1.375rem;
+    font-size: 2.2rem;
 }
 
 .header-text-container{
-    height: calc(100% - 5.5rem);
+    height: calc(100% - var(--nav-height));
     display: flex;
     align-items: center;
 
+}
+
+.header-text-container p {
+    font-size: 2.4rem;
+    margin: 1rem 0 3 rem;
+}
+
+h1{
+    color: var(--white);
+    font-size: 7rem;
 }
